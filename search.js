@@ -12,15 +12,21 @@ const searchOptions = {
 
 const req = https.request(searchOptions, res => {
   console.log(`statusCode: ${res.statusCode}`)
+  	
+  var responseString = '';
+	res.on('data', function(data) {
+	responseString += data;
+	});
 
-  res.on('data', d => {
-  	const devices = JSON.parse(d);
+	res.on('end', function() {
+		const devices = JSON.parse(responseString);
   	for (let device of devices.items) {
   		console.log(device.id);
   		applySignage(device.id);
   	}
-    process.stdout.write(devices)
-  })
+	var responseObject = JSON.parse(responseString);
+	console.dir(responseObject, {depth: null, colors: true})
+	});
 })
 
 req.on('error', error => {
