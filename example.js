@@ -1,15 +1,17 @@
 const axios = require('axios');
 
+const ACCESS_TOKEN = 'enter access token here';
+
 const searchConfig = {
 	headers: { 'User-Agent': 'Mozilla/5.0', 
-		'Authorization': 'Bearer YWNiZmM1MDktMjVhZi00YzEyLWFmMDItYWFjNGY2NWUzODdiYzliNmIwYzUtYjEw_PF84_4590eb6a-2ca2-4394-bc27-9b671ce2fe73',
+		'Authorization': `Bearer ${ACCESS_TOKEN}`,
 		'Content-Type': 'application/json'
 	}
 };
 
 const patchConfig = {
 	headers: { 'User-Agent': 'Mozilla/5.0', 
-		'Authorization': 'Bearer YWNiZmM1MDktMjVhZi00YzEyLWFmMDItYWFjNGY2NWUzODdiYzliNmIwYzUtYjEw_PF84_4590eb6a-2ca2-4394-bc27-9b671ce2fe73',
+		'Authorization': `Bearer ${ACCESS_TOKEN}`,
 		'Content-Type': 'application/json-patch+json'
 	}
 };
