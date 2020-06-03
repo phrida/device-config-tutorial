@@ -43,12 +43,12 @@ const signageData = JSON.stringify([
 ]);
 
 axios
-  .get("https://api.ciscospark.com/v1/devices?tag=signage", searchConfig)
+  .get("https://webexapis.com/v1/devices?tag=signage", searchConfig)
   .then((result) => {
     for (let device of result.data.items) {
       axios
         .patch(
-          `https://api.ciscospark.com/v1/deviceConfigurations/${device.id}`,
+          `https://webexapis.com/v1/deviceConfigurations/${device.id}`,
           signageData,
           patchConfig
         )
