@@ -1,4 +1,4 @@
-# Device API example scripts
+# Webex Device API example scripts
 
 Here you'll find scripts that illustrate how to use the [Devices](https://developer.webex.com/docs/api/v1/devices) and [Device Configurations](https://developer.webex.com/docs/api/v1/device-configurations) APIs.
 
